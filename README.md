@@ -1,5 +1,5 @@
 # MSI-MAG-B560M-MORTAR-i7-10700
-## 配置
+## 配置 Info
 
 macOS Big Sur 11.5.1 + OpenCore 0.7.1
 
@@ -8,23 +8,23 @@ macOS Big Sur 11.5.1 + OpenCore 0.7.1
 | CPU  | i7 10700                                        |
 | 主板 | 微星 B560M 迫击炮 （MSI MAG-B560M-MORTAR-WIFI） |
 | 显卡 | 蓝宝石 RX460 4GB 超白金版 + intel UHD 630       |
+| 网卡 | BCM94360CD 4 天线版本                           |
 | 机型 | iMac 20,1                                       |
 
 - [x] 睡眠唤醒
 - [x] 核显驱动
 - [x] 双硬解
 - [x] CPU 变频
+- [x] WiFi 和 蓝牙
+- [x] 接力和隔空投送
 
 其他不完美的地方有
 
-- 没有更换免驱的无线网卡，所以隔空投送、接力无法使用
-- 自带的 intel AX210 网卡恰巧不在 itlwm 的驱动支持范围内
-- 朋友手上没有 Type-C 设备，所以 USB 定制少了个 Type-C
-- 另外 USB 定制有一个 USB2.0 口也无法工作，不过问题不大
+- 朋友手上没有 Type-C 设备，所以 USB 定制漏了个 Type-C
 
-## 细节
+## 细节 Detail
 
-使用 OpenCore 0.7.1 
+使用 OpenCore 0.7.2
 
 ![](imgs/15155239.png) 
 
@@ -66,4 +66,46 @@ Intel UHD630 的跑分：
 
 ![](imgs/Snipaste_2021-08-01_15-15-56.png) 
 
- 
+ ## 更新 Update
+
+更换了免驱的 BCM94360CD 打了 kexts 目前 WiFi 和 蓝牙也都正常工作：
+
+![Snipaste_2021-08-06_23-40-06](imgs/Snipaste_2021-08-06_23-40-06.png)
+
+WiFi 详情：
+
+![Snipaste_2021-08-06_23-40-34](imgs/Snipaste_2021-08-06_23-40-34.png) 
+
+蓝牙详情：
+
+![Snipaste_2021-08-06_23-40-41](imgs/Snipaste_2021-08-06_23-40-41.png) 
+
+可以正常连接使用设备：
+
+![Snipaste_2021-08-06_23-41-13](imgs/Snipaste_2021-08-06_23-41-13.png) 
+
+所以这个 Big Sur 的控制中心目前就完美了：
+
+![Snipaste_2021-08-06_23-41-33](imgs/Snipaste_2021-08-06_23-41-33.png) 
+
+最后顺便重新定制了下 USB，目前全部正常工作：
+
+![Snipaste_2021-08-06_23-38-41](imgs/Snipaste_2021-08-06_23-38-41.png) 
+
+至此，这套配置的黑苹果驱动完美程度接近 99% +了，后门使用类似配置网友可以直接拿去使用。
+
+## 支持一下  Reward
+
+因为黑苹果驱动定制是很耗费时间的事情，为了追求完美需要各种优化，生活不易，猫猫叹气，如果你恰巧财力雄厚的话，可以考虑打赏下本文哦，打赏情况国光我也会同步更新我的打赏列表的：[打赏列表 | 国光](https://www.sqlsec.com/dashang.html) 
+
+<table>
+    <tr>
+        <td>
+            <center><img src="imgs/1587449920128.jpg" width="70%"></center>
+        </td>
+        <td width="50%">
+            <center><img src="imgs/15874503376388.jpg" width="70%"></center>
+        </td>
+    </tr>
+</table>
+
